@@ -1,0 +1,288 @@
+<!--Alexandros Papadiamantis-->
+
+<!DOCTYPE html>
+<html lang = "el"> <!--Ελληνικα-->
+<head><!--Ιδιοτητες για τον Browser-->
+    <meta charset="UTF-8">  <!--Κωδικοποιηση-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive Web Design -->
+    <title>Αλέξανδρος Παπαδιαμάντης</title><!--Ορισμος Τιτλου Σελιδας-->
+    <link rel = "icon" href="/Images/icon.jpg" type ="image/x-icon"> <!--Ορισμος Εικονιδιου-->
+    <link rel = "stylesheet" href="style1.css"> <!--Για να παρουμε απο το css αρχειο-->
+    <script src = "First.js"></script> <!--Για να παρουμε απο το javascript αρχειο-->
+
+<script>
+
+    function showSelection(selectionID){
+
+    var selections = document.querySelectorAll("aside > nav > div");
+
+    for (let i = 0; i < selections.length; i++){
+
+            if(selections[i].id == selectionID){
+                selections[i].classList.remove("hidden");
+            }
+                else{
+                    selections[i].classList.add("hidden");
+                }
+        }
+    }
+        
+</script>
+
+
+<style>
+
+        * {
+        box-sizing: border-box;
+        }
+
+        .row::after {
+        content: "";
+        clear: both;
+        display: table;
+        }
+
+        [class*="col-"] {
+        float: left;
+        padding: 15px;
+        }
+
+        html {
+        font-family: "Lucida Sans", sans-serif;
+        }
+
+        .menu ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        }
+
+        .menu li:hover {
+        background-color: #0099cc;
+        }
+
+        /* For mobile phones: */
+        [class*="col-"] {
+        width: 100%;
+        }
+
+        @media only screen and (min-width: 600px) {
+        /* For tablets: */
+        .col-s-1 {width: 8.33%;}
+        .col-s-2 {width: 16.66%;}
+        .col-s-3 {width: 25%;}
+        .col-s-4 {width: 33.33%;}
+        .col-s-5 {width: 41.66%;}
+        .col-s-6 {width: 50%;}
+        .col-s-7 {width: 58.33%;}
+        .col-s-8 {width: 66.66%;}
+        .col-s-9 {width: 75%;}
+        .col-s-10 {width: 83.33%;}
+        .col-s-11 {width: 91.66%;}
+        .col-s-12 {width: 100%;}
+        }
+        @media only screen and (min-width: 768px) {
+        /* For desktop: */
+        .col-1 {width: 8.33%;}
+        .col-2 {width: 16.66%;}
+        .col-3 {width: 25%;}
+        .col-4 {width: 33.33%;}
+        .col-5 {width: 41.66%;}
+        .col-6 {width: 50%;}
+        .col-7 {width: 58.33%;}
+        .col-8 {width: 66.66%;}
+        .col-9 {width: 75%;}
+        .col-10 {width: 83.33%;}
+        .col-11 {width: 91.66%;}
+        .col-12 {width: 100%;}
+        }
+
+</style>
+
+
+
+</head>
+
+
+
+<body><!--Περιεχομενο Σελιδας-->
+
+    
+
+
+    <!--Κεφαλιδα-Τιτλος Σελιδας-->
+    <header><b>Καλωσορίσατε στον Ιστότοπο του Αλέξανδρου Παπαδιαμάντη!!</b></header>
+
+
+
+    <!--Δηλωση του Κυριου Menu-->
+    <nav class = "menu">    
+        <li><button onclick="ShowBio()"><a href="#bio">Βιογραφία</a></button></li>
+        <li><button onclick="ShowImages()"><a href="#photos">Φωτογραφίες</a></button></li>
+        <li><button onclick="ShowProjects()"><a href="#projects">Έργα</a></button></li>
+        <li><button onclick="ShowLinks()" ><a href="#links">Σύνδεσμοι</a></button></li>
+        <li><button onclick="Manage()"><a href="#manage">Διαχείριση</a></button></li>
+    </nav>      <!--Τελος του Κυριου Menu-->
+
+
+    
+
+
+
+    <!--Δηλωση του Πλευρικου Menu-->
+    <aside> 
+
+        
+        <!--Υπομενου Βιογραφιας-->
+        <div id = "bio" class="hidden">
+
+        <br> <!--Αλλαγη Γραμμης-->
+            
+            <li><button onclick = "showSelection(ShowBio)"><a href="#General_Info">Γενικές Πληροφορίες</a></button></li>
+            <li><button onclick = "showSelection(ShowBio)"><a href="#Early_Life">Νεαρή Ηλικία</a></button></li>
+            <li><button onclick = "showSelection(ShowBio)"><a href="#Career">Καριέρα</a></button></li>
+            <li><button onclick = "showSelection(ShowBio)"><a href="#Personal_Life">Προσωπική Ζωή</a></button></li>
+            <li><button onclick = "showSelection(ShowBio)"><a href="#Last_Years">Τελευταία Χρόνια</a></button></li>
+        </div>
+
+        <br> <!--Αλλαγη Γραμμης-->
+
+        <!--Υπομενου Φωτογραφιων-->
+        <div id = "photos" class="hidden">
+            <li><button onclick = "showSelection(ShowImages)"><a href="#General_Photos">Φωτογραφιες</a></button></li>
+            <li><button onclick = "showSelection(ShowImages)"><a href="#Photo_of_Books">Φωτογραφιες Βιβλιων</a></button></li>
+            <li><button onclick = "showSelection(ShowImages)"><a href="#Memorial">Φωτογραφιες Μνημειων</a></button></li>
+        </div>
+
+
+
+        <!--Υπομενου Εργων-->
+        <div id = "projects" class = "hidden">
+    
+
+        </div>
+
+        <!--Υπομενου Συνεσμων-->
+        <div id = "links" class = "hidden">
+
+
+        </div>
+
+        <br> <!--Αλλαγη Γραμμης-->
+
+        <!--Υπομενου Διαχειρισης-->
+        <div id = "manage" class = "hidden">
+
+        <li><button onclick = "Connect()"><a href = "#connect">Συνδεση</a></button></li>
+        <li><button onclick = "Disconnect()"><a href = "#disconnect">Αποσυνδεση</a></button></li>
+        <li><button onclick = "ManageProjects()"><a href = "#manage_projects">Διαχειριση Εργων</a></button></li>
+        <li><button onclick = "ManageLinks()"><a href = "#manage_links">Διαχειριση Συνδεσμων</a></button></li>
+
+
+        </div>
+
+        
+    </aside>    <!--Τελος του Πλευρικου Menu-->
+
+
+
+
+    <!--Δηλωση της Main-->
+    <main>      
+
+        <b>Ο Αλέξανδρος Παπαδιαμάντης είναι ένας από τους σημαντικότερους Έλληνες λογοτέχνες, γνωστός και ως «ο άγιος των ελληνικών γραμμάτων»
+        Έγραψε κυρίως διηγήματα, τα οποία κατέχουν περίοπτη θέση στη νεοελληνική λογοτεχνία. 
+        Ο Παπαδιαμάντης γεννήθηκε στη Σκιάθο το 1851. Πατέρας του ήταν ο ιερέας Αδαμάντιος Εμμανουήλ Σκιαθίτης, ο οποίος ακολουθούσε την αυστηρή παράδοση του ορθοδόξου κινήματος των Κολλυβάδων. Ο Ι. Φραγκούλας έχει υποστηρίξει ότι ο παππούς του Αλεξάνδρου είχε το επίθετο Μοσκοβάκης, ωστόσο η ύπαρξη, σε αρχείο του 1820, του ονόματος «καπετάν Μανόλης Διαμάντης Σκιαθίτης» δεν επιτρέπει να αμφιβάλλουμε για το πραγματικό του επίθετο.
+        Εξοικειώθηκε νωρίς με τα εκκλησιαστικά πράγματα, τη θρησκευτικότητα, τα εξωκλήσια και την ήσυχη ζωή του νησιώτικου περίγυρου. Όλα αυτά διαμόρφωσαν μια χριστιανική ιδιοσυγκρασία, που διατήρησε έως το τέλος της ζωής του
+        Τελείωσε το Δημοτικό στο νησί του το 1860, με τον χαρακτηρισμό «μέτριος» και αναφερόμενος, όπως και σε όλες τις τάξεις, με το όνομα «Αλέξανδρος Παπά Διαμάντης» και γράφτηκε στο Σχολαρχείο την ίδια χρονιά, ως «Αλέξανδρος Παπά Αδαμαντίου»
+        Όταν τελείωσε τη Β΄τάξη, το Σχολαρχείο της Σκιάθου καταργήθηκε και ο Αλέξανδρος έπρεπε να σπουδάσει στο αντίστοιχο της Σκοπέλου. Καθώς όμως τα οικονομικά της οικογένειας δεν επέτρεπαν τη διαμονή του στη Σκόπελο, έμεινε για δύο χρόνια στη Σκιάθο, χωρίς να πηγαίνει σχολείο.
+        Από τη στιγμή που γράφτηκε στο Πανεπιστήμιο άρχισε να δημοσιογραφεί. Επίσης άρχισε να κάνει μεταφράσεις από τα γαλλικά και αγγλικά τα οποία γνώριζε πολύ καλά
+        Η θέση του βελτιώθηκε κάπως, όταν γνωρίστηκε με τον προοδευτικό δημοσιογράφο και εκδότη Βλάση Γαβριηλίδη, ο οποίος ίδρυσε την, περίφημη για την εποχή της, εφημερίδα Ακρόπολις. Η ζωή του όμως δεν άλλαξε. Αν και έπαιρνε, ως αμοιβή από την Ακρόπολη, 200 και 250 δραχμές το μήνα), ενώ κέρδιζε αρκετά και από τις -περιζήτητες- συνεργασίες του με άλλες εφημερίδες και περιοδικά, η οικονομική του κατάσταση στάθηκε για πάντα η αδύνατη πλευρά του. Ήταν σπάταλος και ανοργάνωτος όσον αφορά τη διαχείριση των χρημάτων του.
+        Η ζωή του Παπαδιαμάντη μέρα με τη μέρα γινόταν δυσκολότερη. Η φτώχεια, το ποτό και η ασυλλόγιστη απλοχεριά του έγιναν αιτία να φτάσει σε απελπιστική κατάσταση, ενώ παράλληλα χειροτέρευε και η υγεία του. Κάποιοι φίλοι του (μεταξύ των οποίων οι Μιλτιάδης Μαλακάσης, Επαμεινώνδας Δεληγιώργης, Παύλος Νιρβάνας, Δημήτριος Κακλαμάνος, Αριστομένης Προβελέγγιος) διοργάνωσαν μια γιορτή στο Φιλολογικό Σύλλογο "Παρνασσός" το 1908 για τα λογοτεχνικά εικοσιπεντάχρονά του και κατάφεραν να συγκεντρώσουν ένα χρηματικό ποσό, με σκοπό να τον βοηθήσουν να βγει από το οικονομικό αδιέξοδο.
+        Πράγματι, ο Παπαδιαμάντης κατόρθωσε να πληρώσει τα χρέη του και να αγοράσει για πρώτη φορά καινούρια ρούχα κι ετοιμάστηκε να επιστρέψει στη Σκιάθο. Μάταια ο Νιρβάνας (γιατρός ο ίδιος) προσπάθησε να τον πείσει να εισαχθεί στο νοσοκομείο. Στα τέλη του Μαρτίου του 1908 έφυγε για το νησί του, με σκοπό να μην ξαναγυρίσει στην πόλη «της δουλοπαροικίας και των πλουτοκρατών»
+        Στο νησί του εξακολούθησε να κάνει τις μεταφράσεις που του έστελνε ο Γιάννης Βλαχογιάννης, για να έχει κάποιον πόρο ζωής, μα ύστερα από λίγο τα χέρια του πρήστηκαν και του ήταν δύσκολο να γράφει. Το ημερήσιο πρόγραμμά του περιλάμβανε πολύ πρωινό ξύπνημα, μια βόλτα στην ακρογιαλιά κι ύστερα εκκλησία. Μαζεύοντας τα ιστορικά του νησιού και τα παλιά χρονικά συνέθεσε τα τελευταία του διηγήματα πιο ώριμα και πιο ολοκληρωμένα. 
+        Ο Παπαδιαμάντης απεβίωσε τον Ιανουάριο του 1911, ύστερα από επιδείνωση της υγείας του. Η κηδεία του τελέστηκε μέσα στο πένθος όλων των απλών ανθρώπων του νησιού. Με την είδηση του θανάτου του, το πένθος έγινε πανελλήνιο. Έγιναν επίσημα μνημόσυνα στην Αθήνα, στην Πόλη, στην Αλεξάνδρεια και αλλού. Ορισμένοι ποιητές συνέθεσαν εγκωμιαστικά έργα (Μαλακάσης, Πορφύρας κ.ά.) και τα φιλολογικά περιοδικά της εποχής εξέδωσαν τιμητικά τεύχη, αφιερωμένα στη μνήμη του. Ο εκδοτικός οίκος Φέξη, λίγο αργότερα, άρχισε την έκδοση των έργων του, που έφτασαν τους έντεκα τόμους.</b>
+
+    <div class="flex">
+        <div><img src="/Images/Papadiamantis/1.jpg" alt="Εικονα 1" width="200px"></div>
+        <div><img src="/Images/Papadiamantis/2.jpg" alt="Εικονα 2" width="150px"></div>
+        <div><img src="/Images/Papadiamantis/3.jpg" alt="Εικονα 3" width="150px"></div>
+        <div><img src="/Images/Papadiamantis/4.jpg" alt="Εικονα 4" width="220px"></div>
+        <div><img src="/Images/Papadiamantis/5.jpg" alt="Εικονα 5" width="250px"></div>
+        <div><img src="/Images/Papadiamantis/6.jpg" alt="Εικονα 6" width="200px"></div>
+    </div> 
+
+    <div class="flex">
+        <div><img src="/Images/Books/1.jpg" alt="Βιβλιο 1" width="150px"></div>
+        <div><img src="/Images/Books/2.jpg" alt="Βιβλιο 2" width="150px"></div>
+        <div><img src="/Images/Books/3.jpeg" alt="Βιβλιο 3" width="150px"></div>
+        <div><img src="/Images/Books/4.png" alt="Βιβλιο 4" width="150px"></div>
+        <div><img src="/Images/Books/5.jpg" alt="Βιβλιο 5" width="150px"></div>
+        <div><img src="/Images/Books/6.jpg" alt="Βιβλιο 6" width="150px"></div>
+    </div>
+
+
+    <div class="flex">
+        <div><img src="/Images/Memorial/1.jpg" alt="Μνημειο Εικονα 1" width="150px"></div>
+        <div><img src="/Images/Memorial/2.jpg" alt="Μνημειο Εικονα 2" width="150px"></div>
+    </div> 
+
+
+    <div class = "ShowProjects">
+
+        <h3><b>Τα Έργα Τού Αλέξανδρου Παπαδιαμάντη Είναι Τα Παρακάτω:</b></h3>
+
+            <p>Η Φόνισσα (1903)</p>
+            <p>Διηγήματα</p>
+            <p>Διηγήματα των Χριστουγέννων(1912)</p>
+            <p>Απάντα</p>
+            <p>Οι Έμποροι των Εθνών(1883)</p>
+            <p>Βαρδιανός στα Σπόρκα</p>
+            <p>Τα Χριστούγεννα(1896)</p>
+            <p>Πασχαλινά Διηγήματα</p>
+            <p>Η Γυφτοπούλα</p>
+            <p>Η Νοσταλγός(1912)</p>
+            <p>Αθηναϊκά Διηγήματα</p>
+            <p>Παιδικά Διηγήματα</p>
+            <p>Τα Αθηναϊκά</p>
+            <p>Το Σκοτεινό Τρυγόνι</p>
+            <p>Βαρδιάνος στα Σπόρκα</p>
+
+    </div>
+
+    <p>-------------------------------------------</p>
+
+
+    <div class = "ShowLinks">
+
+            
+
+        <h4><b>Ακολουθούν Οι Σύνδεσμοι:</b></h4>
+          <p><a href="https://el.wikipedia.org/wiki/%CE%91%CE%BB%CE%AD%CE%BE%CE%B1%CE%BD%CE%B4%CF%81%CE%BF%CF%82_%CE%A0%CE%B1%CF%80%CE%B1%CE%B4%CE%B9%CE%B1%CE%BC%CE%AC%CE%BD%CF%84%CE%B7%CF%82" target="_blank" >Wikipedia Site</a></p>
+          <p><a href="https://www.sansimera.gr/biographies/1144" target="_blank" >Βιογραφία</a></p>
+          <p><a href="https://www.lifo.gr/culture/vivlio/alexandros-papadiamantis-o-syggrafeas-poy-apothisayrise-ton-paraxeno-tropo-ton" target="_blank" >Βιογραφία 2</a></p>
+          <p><a href="https://www.politeianet.gr/sygrafeas/papadiamantis-alexandros-33947" target="_blank">Η Λίστα με τα Βιβλία του +Αγορά</a></p>
+        </div>
+            
+        <br>    <!--Αλλαγη Γραμμης-->
+        <br>    <!--Αλλαγη Γραμμης-->
+        <br>    <!--Αλλαγη Γραμμης-->
+
+
+
+
+
+    </main>         <!--Τελος της Main-->
+
+
+
+
+
+    <footer></footer>
+
+</body>
+
+
+<!--<a href=""></a> Για να αλλαξουμε σελιδα-->
+</html> <!--Τελος Αρχειου-->

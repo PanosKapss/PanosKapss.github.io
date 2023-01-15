@@ -1,0 +1,186 @@
+body{
+    background-image:url('index.webp');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+
+    
+    
+} 
+
+/* ------------------------------- */
+
+
+header{
+
+text-align: center; font-size: 50;
+
+font-family: 'Times New Roman', Times, serif;
+font-style: italic;
+color:black;
+background-color: lightgray;
+
+}
+
+
+/* ------------------------------- */
+
+
+nav{
+    background-color: gray;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+}
+
+
+h3,p{       /*Για Τα Εργα */
+color:black;
+font-weight: bold;
+width:54cm;
+
+}
+
+h4{         /*Για τα Links */
+height:25px;
+width:54cm;
+color:black;
+}
+
+
+/* ------------------------------- */
+
+
+.menu { 
+    list-style-type: none;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    height: auto;
+    
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    }
+    .menu li {
+    display: inline-block;
+    font-size: 16px;
+    padding: 8px;
+    }
+    .menu li a {
+    display: block;
+    color: white;
+    padding: 4px;
+    text-decoration: none;
+    }
+    .menu li a:hover {
+    /* background-color: #555; */
+    color: white;
+    }
+
+    /* ------------------------------- */
+
+
+*{
+    height: auto;
+    margin: 0;
+    padding: 0;
+
+    }
+
+
+    .grid{
+        width: 100%;    /*100vw */    
+        height:100%;           /* 100vh */
+        display:grid;
+        grid-template-columns: 1fr 3fr;
+        grid-template-rows: min-content auto min-content;
+
+
+        
+
+    grid-template-areas:
+        'header header'
+        'nav nav'
+        'aside main'
+        'footer footer';
+    }
+    
+    header, nav, aside, main, footer {
+   /* border: 1px solid white; */
+    text-align: center;
+    /* background-color:lightgray; */
+    height: auto;
+    
+
+    
+    }
+
+
+    
+
+
+
+    header {grid-area:header;}
+    nav {grid-area: nav;}
+    aside {grid-area: aside;}
+    main {grid-area: main;}
+    footer {grid-area: footer;}
+
+
+    aside, main {
+    float: left;
+    height: calc(100vh - 100px);
+    box-sizing: border-box;
+    }
+    aside{
+    width: 10%;
+    }
+    main{           /*Παραμετροι για Main */
+    width: 90%;
+    color: red; 
+    /*  background-color: gray; */
+    height: 250px;
+    font-size: 50;
+    }
+    footer {
+    clear: both;
+    }
+
+/* -------------------------------------------------- */
+
+
+    .flex {         /*Παραμετροι για Flex */
+        display: flex;
+        flex-direction:row;
+        width: 2000px;
+        height: auto;
+        justify-content:space-evenly;
+        align-items:center;;
+        padding: 20px;
+        }
+
+        .flex > * {
+        
+        background-color: lightgrey;
+        border: 1px solid black;
+        padding: 1px;
+        font-size: 0rem;
+        }
+
+
+
+        form{
+            display: grid;
+            grid-template-columns: 1fr 4fr;
+        }
+        form *{
+            padding: 3px;
+            margin: 3px;
+        }
+
+
+        
+
+
+
+

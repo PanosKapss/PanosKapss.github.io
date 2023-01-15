@@ -1,0 +1,22 @@
+{
+
+    "name" : "Alexandros Papadiamantis",
+    "favoriteNumber" : 3,
+    "isWritter" : true,
+    "hobbies" : ["Writing","Lecturing"],
+
+    "friends": [{
+
+        "name": "Joey",
+        "favouriteNumber": 100,
+        "isProgrammer": false,
+        "friends": []
+
+
+
+
+    }]
+
+
+
+}
